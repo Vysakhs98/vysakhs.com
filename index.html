@@ -1,59 +1,183 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vysakh S | Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vysakh S | Home</title>
     
-    <!-- Global Styles -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Links to your CSS file -->
     <link rel="stylesheet" href="assets/css/main.css">
-    <!-- Home Page Specific Styles -->
-    <link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
 
-    <!-- Navigation Menu -->
-    <header class="site-header">
-        <nav class="container flex justify-between align-center">
-            <a href="index.html" class="logo">Vysakh S.</a>
-            
-            <ul class="nav-links flex gap-md">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Background Orbs -->
+    <div class="glow-orb top"></div>
+    <div class="glow-orb bottom"></div>
 
-    <!-- Hero Section -->
-    <main>
-        <section class="hero" style="text-align: center; padding: var(--spacing-xl) 0;">
-            <!-- The video tag looks for the hero-loop.mp4 inside your videos folder -->
-            <video autoplay loop muted playsinline class="hero-video" style="max-width: 100%; border-radius: 12px; margin-bottom: var(--spacing-lg);">
-                <source src="assets/videos/hero-loop.mp4" type="video/mp4">
-            </video>
-            
-            <div class="container hero-content">
-                <h1 style="font-size: 3rem; margin-bottom: var(--spacing-sm);">Hi, I'm Vysakh.</h1>
-                <p style="font-size: 1.25rem; margin-bottom: var(--spacing-lg);">Welcome to my creative portfolio.</p>
-                <a href="portfolio.html" class="btn">View My Work</a>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="wrap navin">
+            <a class="logo magnetic" href="index.html">Vysakh S<span>.</span></a>
+            <div class="links">
+                <a href="index.html" class="magnetic">Home</a>
+                <a href="about.html" class="magnetic">About</a>
+                <a href="portfolio.html" class="magnetic">Portfolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="page-section active">
+        
+        <!-- Hero Section -->
+        <header class="hero wrap">
+            <div class="reveal">
+                <div class="eyebrow">UI/UX & Product Designer</div>
+                <h1>Designing clarity<br><span>into complexity.</span></h1>
+            </div>
+            <div class="herofoot reveal" style="transition-delay: 0.1s;">
+                <div>
+                    <p class="intro">I’m Vysakh S. I design digital products across SaaS, enterprise, and mobile platforms—combining deep research, interaction design, and visual storytelling to create scalable experiences.</p>
+                    <div class="hero-actions">
+                        <a href="#work" class="btn-primary magnetic">View My Work</a>
+                        <a href="Vysakh_S_Product_Designer_Resume_2026.pdf" target="_blank" class="btn-secondary magnetic">Download Resume</a>
+                    </div>
+                </div>
+                <div class="stats">
+                    <div class="stat"><b>3+</b><span>Years</span></div>
+                    <div class="stat"><b>30+</b><span>Products</span></div>
+                    <div class="stat"><b>400+</b><span>Screens</span></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ======================================================== -->
+        <!-- NEW: SELECTED WORK SECTION -->
+        <!-- ======================================================== -->
+        <section id="work" style="padding-bottom: 120px;">
+            <div class="wrap">
+                <div class="head reveal">
+                    <h2>Selected Work</h2>
+                    <p>A collection of my latest product designs and case studies.</p>
+                </div>
+                
+                <div class="grid">
+                    <!-- E-Commerce App Project Card (Spans across the full grid for emphasis) -->
+                    <article class="card reveal" data-magnetic style="grid-column: span 12;">
+                        <div class="card-top">
+                            <span class="tag">Mobile · E-Commerce</span>
+                            <span class="num">01</span>
+                        </div>
+                        <div class="card-bottom">
+                            <h3>Next-Gen E-Commerce Experience.</h3>
+                            <p>Redesigning the digital shopping journey with intuitive navigation, personalized product discovery, and seamless checkout flows.</p>
+                            
+                            <!-- THIS IS YOUR EXACT LINK PATH -->
+                            <a href="projects/ecommerce-app.html" class="view-project-link magnetic">View Project ↗</a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
+        
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer mt-xl">
-        <div class="container flex flex-col align-center gap-sm">
-            <ul class="social-links flex gap-md">
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">GitHub</a></li>
-                <li><a href="#">Email</a></li>
-            </ul>
-            <p>&copy; 2026 Vysakh S. All rights reserved.</p>
+    <!-- Footer / Contact Section -->
+    <footer class="contact">
+        <div class="wrap">
+            <h2 class="contact-title reveal">Let’s build<br><span>what’s next.</span></h2>
+            <div class="contactgrid reveal">
+                <p>Always open to thoughtful conversations, interesting product challenges, and opportunities to create experiences that make a real difference.</p>
+                <div class="contactlinks">
+                    <a class="magnetic" href="mailto:vysakh.official98@gmail.com"><span>Email</span><span>↗</span></a>
+                    <a class="magnetic" href="https://www.vysakhs.com"><span>vysakhs.com</span><span>↗</span></a>
+                    <a class="magnetic" href="https://www.behance.net/Vysakh_98"><span>Behance</span><span>↗</span></a>
+                    <a class="magnetic" href="https://www.linkedin.com/in/vysakhdesigns/"><span>LinkedIn</span><span>↗</span></a>
+                </div>
+            </div>
+            <div class="footer-btm reveal">
+                <span>© 2026 Vysakh S</span>
+                <span>Designing with curiosity. Growing with every problem.</span>
+            </div>
         </div>
     </footer>
 
-    <!-- Global Scripts -->
-    <script src="assets/js/main.js"></script>
+    <!-- Interactive Scripts for Cursor and Animations -->
+    <script>
+        // Scroll Reveal Observer
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+        
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Custom Cursor Logic
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+        let mouseX = 0, mouseY = 0;
+        let outlineX = 0, outlineY = 0;
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        });
+
+        function animateCursor() {
+            let dx = mouseX - outlineX;
+            let dy = mouseY - outlineY;
+            outlineX += dx * 0.15;
+            outlineY += dy * 0.15;
+            cursorOutline.style.transform = `translate(${outlineX}px, ${outlineY}px)`;
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        // Magnetic Hover Logic
+        const magnetics = document.querySelectorAll('.magnetic, .card, a, button');
+        magnetics.forEach(elem => {
+            elem.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+            elem.addEventListener('mouseleave', () => {
+                document.body.classList.remove('cursor-hover');
+                elem.style.transform = ''; 
+            });
+
+            if(elem.classList.contains('magnetic')) {
+                elem.addEventListener('mousemove', (e) => {
+                    const rect = elem.getBoundingClientRect();
+                    const h = rect.width / 2;
+                    const v = rect.height / 2;
+                    const x = e.clientX - rect.left - h;
+                    const y = e.clientY - rect.top - v;
+                    elem.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+                });
+            }
+        });
+
+        // Spotlight effect for the Bento Grid Card
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
 </body>
 </html>

@@ -1,56 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About | Vysakh S</title>
-    <!-- Links to your main CSS file -->
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Links to your newly updated CSS file -->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
 
-    <!-- Navigation Menu -->
-    <header class="site-header">
-        <nav class="container flex justify-between align-center">
-            <a href="index.html" class="logo">Vysakh S.</a>
-            <ul class="nav-links flex gap-md">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Background Glowing Orbs -->
+    <div class="glow-orb top"></div>
+    <div class="glow-orb bottom"></div>
 
-    <!-- About Page Content -->
-    <main class="container mt-xl mb-xl">
-        <h1>About Me</h1>
-        <div class="grid grid-2 gap-lg mt-lg">
-            <div class="about-text">
-                <p>Hello! I am Vysakh, a passionate creator. I built this portfolio to showcase my journey and the projects I have been working on.</p>
-                <p>My focus is on blending clean design with powerful functionality to create memorable digital experiences.</p>
-                <a href="portfolio.html" class="btn mt-md">See My Work</a>
-            </div>
-            <div class="about-image">
-                <!-- You will upload your headshot to assets/images/about/ later -->
-                <div class="card" style="min-height: 300px; display: flex; align-items: center; justify-content: center;">
-                    <p>[Your Image Goes Here]</p>
-                </div>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="wrap navin">
+            <a class="logo magnetic" href="index.html">Vysakh S<span>.</span></a>
+            <div class="links">
+                <a href="index.html" class="magnetic">Home</a>
+                <a href="about.html" class="magnetic">About</a>
+                <a href="portfolio.html" class="magnetic">Portfolio</a>
             </div>
         </div>
+    </nav>
+
+    <!-- ======================================================== -->
+    <!-- ABOUT SECTION -->
+    <!-- ======================================================== -->
+    <main>
+        <section class="about-section">
+            <div class="wrap">
+                <div class="about-split">
+                    
+                    <!-- Left: Profile Image -->
+                    <div class="about-image reveal card" data-magnetic>
+                        <!-- IMPORTANT: Just make sure you save your profile picture as "profile.jpg" inside your assets/images/about/ folder -->
+                        <img src="assets/images/about/profile.jpg" alt="Vysakh S">
+                    </div>
+                    
+                    <!-- Right: Short Bio -->
+                    <div class="about-bio reveal" style="transition-delay: 0.1s;">
+                        <div class="eyebrow">Behind the Pixels</div>
+                        
+                        <h1>Hi, I'm Vysakh S.</h1>
+                        
+                        <p>I am a UI/UX & Product Designer based in Bengaluru, driven by the challenge of turning complex workflows into intuitive, engaging digital experiences.</p>
+                        
+                        <p>With over 3 years of experience spanning Enterprise SaaS, EdTech, and iGaming, I focus on the intersection of deep user research, strategic interaction design, and compelling visual storytelling.</p>
+                        
+                        <p>When I'm not designing, you'll likely find me exploring neurodivergent-friendly design patterns, building independent product concepts, or analyzing the intricacies of human-computer interaction.</p>
+                        
+                        <div class="hero-actions" style="margin-top: 40px;">
+                            <a href="mailto:vysakh.official98@gmail.com" class="btn-primary magnetic">Get in touch</a>
+                            <a href="portfolio.html" class="btn-secondary magnetic">View My Work</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer mt-xl">
-        <div class="container flex flex-col align-center gap-sm">
-            <ul class="social-links flex gap-md">
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">GitHub</a></li>
-                <li><a href="#">Email</a></li>
-            </ul>
-            <p>&copy; 2026 Vysakh S. All rights reserved.</p>
+    <!-- Footer / Contact Section -->
+    <footer class="contact">
+        <div class="wrap">
+            <h2 class="contact-title reveal">Let’s build<br><span>what’s next.</span></h2>
+            <div class="contactgrid reveal">
+                <p>Always open to thoughtful conversations, interesting product challenges, and opportunities to create experiences that make a real difference.</p>
+                <div class="contactlinks">
+                    <a class="magnetic" href="mailto:vysakh.official98@gmail.com"><span>Email</span><span>↗</span></a>
+                    <a class="magnetic" href="https://www.vysakhs.com"><span>vysakhs.com</span><span>↗</span></a>
+                    <a class="magnetic" href="https://www.behance.net/Vysakh_98"><span>Behance</span><span>↗</span></a>
+                    <a class="magnetic" href="https://www.linkedin.com/in/vysakhdesigns/"><span>LinkedIn</span><span>↗</span></a>
+                </div>
+            </div>
+            <div class="footer-btm reveal">
+                <span>© 2026 Vysakh S</span>
+                <span>Designing with curiosity. Growing with every problem.</span>
+            </div>
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <!-- Interactive Scripts for Cursor and Scroll Animations -->
+    <script>
+        // Scroll Reveal Observer
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+        
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Custom Cursor Logic
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+        let mouseX = 0, mouseY = 0;
+        let outlineX = 0, outlineY = 0;
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        });
+
+        function animateCursor() {
+            let dx = mouseX - outlineX;
+            let dy = mouseY - outlineY;
+            outlineX += dx * 0.15;
+            outlineY += dy * 0.15;
+            cursorOutline.style.transform = `translate(${outlineX}px, ${outlineY}px)`;
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        // Magnetic Hover
+        const magnetics = document.querySelectorAll('.magnetic, .card, a, button');
+        magnetics.forEach(elem => {
+            elem.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+            elem.addEventListener('mouseleave', () => {
+                document.body.classList.remove('cursor-hover');
+                elem.style.transform = ''; 
+            });
+
+            if(elem.classList.contains('magnetic')) {
+                elem.addEventListener('mousemove', (e) => {
+                    const rect = elem.getBoundingClientRect();
+                    const h = rect.width / 2;
+                    const v = rect.height / 2;
+                    const x = e.clientX - rect.left - h;
+                    const y = e.clientY - rect.top - v;
+                    elem.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+                });
+            }
+        });
+
+        // Spotlight effect for the profile image box
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
 </body>
 </html>
